@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adapt.io</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <meta name="title" content="A best contacts for your campaigns"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <meta name="theme-color" content="#ffff" />
+</head>
+<body>
+    <!--menu bar-->
+    <!--menu bar with links-->
+    <div class="mnu flex">
+        <div class="mnu_icon flex font-pop">
+            <span class="flex logo">
+               <img src="./image/logo.jpg" alt="logo"> 
+               <h4>adapt.io</h4>
+            </span>
+            <span id="icon"  tabindex="0">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </span>
+        </div>
+        <nav class="mnu_items" id="mnlist">
+            <li tabindex=0 ><a href="#" class="font-pop">Signin</a></li>
+            <li tabindex="0" ><a href="#" class="font-pop">Free Trail</a></li>
+            <li tabindex="0">
+                <a href="#" class="demo font-pop brd-1">
+                    Request Demo
+                </a>
+            </li>
+    
+        </nav>
+    </div>
+    <!--header main content company details-->
+    <header class="bdr-1 flex">
+        <div class="logo">
+            <img src="image/Sonymusic.png" alt="Sonymusic">
+        </div>
+    <!--Company name,location,website-->
+        <div class="flex cont-hdr">
+                    <h3 class="">Sony Music Entertainments</h3>
+                    <span>
+                        <h4 class="font-pop">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Location
+                        </h4>
+                        <h4>550 Medison Avenue,23<sup>rd</sup> Floor New York,U.S.A</h4>
+
+                    </span>
+                    <span>
+                        <h4 class="font-pop">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            Phone Number
+                        </h4>
+                        <h4>+1 212-833-8000</h4>
+                    </span>
+                    <span>
+                        <h4 class="font-pop">
+                            <i class="fa  fa-solid fa-globe" aria-hidden="true"></i>
+                            Website
+                        </h4>
+                        <h4>
+                            <a class="url" herf="#">sonymusic.com</a>
+                        </h4>
+                    </span>
+        </div>
+        <!--Requesting for a demo-->
+        <div class="flex rqt-demo bdr-1" id="rqtdemo">
+            <img src="./image/logo.jpg" alt="Adapt-logo">
+            <span class="font-pop article">
+                Adapt data is orginally compilled and validated
+                by our community of 150,000+ active
+                users who uses adapt
+                <br>
+            </span>
+            <button class="btn-rd brd-1 font-pop">Request Demo</button>
+        </div>
+        <br>
+    </header>
+
+    <section class="brd-1 flex font-pop">
+        <div class="flex contacts-info">
+            <span>
+                <h2>
+                    1K-10K
+                </h2>
+                <h4><i class="fa fa-users" aria-hidden="true"></i>Head count</h4>
+            </span>
+            <span>
+                <h2>
+                    $50-100M
+                </h2>
+                <h4><i class="fa fa-money" aria-hidden="true"></i>Revenue</h4>
+            </span >
+            <span>
+                <h2>
+                    MUSIC,MOVIES 
+                </h2>
+                <h4><i class="fa fa-building-o" aria-hidden="true"></i>Industury</h4>
+            </span>
+
+        </div>
+        <div class="add-ons">
+            <h3 class="font-js">
+                Adapt has more than 600 hundred people working in Sony Music Entertainment has 99
+                decision members,100 champions,90 influencers. 
+            </h3>
+        </div>
+    </section>
+    <br><br>
+    <div>
+        <h4 class="font-js topic">More Contacts</h4>
+    </div>
+    <br>
+    <!--contacts-->
+    <div class="contacts grid">
+        <!--contacts of two rows-->
+        <div class="row1 flex">
+        <!--contact card-->
+            <div class="cards">
+        <!--contact card name-->
+                <span class="flex">
+                    
+                    <h3><i class="fa fa-user-o" aria-hidden="true"></i> Louis Cameron</h3>
+                    <h4>Product Owner</h4>
+                </span>
+        <!--contact card details-->
+                <span class="flex">
+                    <h4><i class="fa fa-briefcase" aria-hidden="true"></i> Finance and Admin</h4>
+                    <h4><i class="fa fa-envelope-o" aria-hidden="true"></i>l****@gmail.com</h4>
+                    <h4><i class="fa fa-phone" aria-hidden="true"></i>+1 80045 45008</h4>
+                    <h4><button class="bdr-1" onclick="getContact(true)" tabindex="0" id='contact-btn'>Get Contact</button></h4>
+                </span>
+            </div>
+        <!--contact card-->
+            <div class="cards">
+                <!--contact card name-->
+                <span class="flex">
+                    <h3><i class="fa fa-user-o" aria-hidden="true"></i> Louis Cameron</h3>
+                    <h4>Product Owner</h4>
+                </span>
+                <!--contact card details-->
+                <span class="flex">
+                    <h4><i class="fa fa-briefcase" aria-hidden="true"></i> Finance and Admin</h4>
+                    <h4><i class="fa fa-envelope-o" aria-hidden="true"></i>l****@gmail.com</h4>
+                    <h4><i class="fa fa-phone" aria-hidden="true"></i>+1 80045 45008</h4>
+                    <h4><button class="bdr-1" tabindex="0" onclick="getContact(true)"  id='contact-btn'>Get Contact</button></h4>
+                </span>
+            </div>
+            <!--contact card-->
+            <div class="cards">
+                <!--contact card name-->
+                <span class="flex">
+                    
+                    <h3><i class="fa fa-user-o" aria-hidden="true"></i> Louis Cameron</h3>
+                    <h4>Product Owner</h4>
+                </span>
+                <!--contact card details-->
+                <span class="flex">
+                    <h4><i class="fa fa-briefcase" aria-hidden="true"></i> Finance and Admin</h4>
+                    <h4><i class="fa fa-envelope-o" aria-hidden="true"></i>l****@gmail.com</h4>
+                    <h4><i class="fa fa-phone" aria-hidden="true"></i>+1 80045 45008</h4>
+                    <h4><button class="bdr-1" tabindex="0" onclick="getContact(true)" id='contact-btn'>Get Contact</button></h4>
+                </span>
+            </div>
+            
+        </div>
+        <!--contact row2-->
+        <div class="row2 flex">
+            <!--contact card-->
+            <div class="cards">
+                <!--contact card name-->
+                <span class="flex">
+                
+                    <h3><i class="fa fa-user-o" aria-hidden="true"></i> Louis Cameron</h3>
+                    <h4>Product Owner</h4>
+                </span>
+                <!--contact card details-->
+                <span class="flex">
+                    <h4><i class="fa fa-briefcase" aria-hidden="true"></i> Finance and Admin</h4>
+                    <h4><i class="fa fa-envelope-o" aria-hidden="true"></i>l****@gmail.com</h4>
+                    <h4><i class="fa fa-phone" aria-hidden="true"></i>+1 80045 45008</h4>
+                    <h4><button class="bdr-1" tabindex="0" onclick="getContact(true)"  id='contact-btn'>Get Contact</button></h4>
+                </span>
+            </div>
+            <!--contact card-->
+            <div class="cards">
+                <!--contact card name-->
+                <span class="flex">
+                    <h3><i class="fa fa-user-o" aria-hidden="true"></i> Louis Cameron</h3>
+                    <h4>Product Owner</h4>
+                </span>
+                <!--contact card details-->
+                <span class="flex">
+                    <h4><i class="fa fa-briefcase" aria-hidden="true"></i> Finance and Admin</h4>
+                    <h4><i class="fa fa-envelope-o" aria-hidden="true"></i>l****@gmail.com</h4>
+                    <h4><i class="fa fa-phone" aria-hidden="true"></i>+1 80045 45008</h4>
+                    <h4><button class="bdr-1" tabindex="0" onclick="getContact(true)"  id='contact-btn'>Get Contact</button></h4>
+                </span>
+            </div>
+            <!--contact card -->
+            <div class="cards">
+                <!--contact card name-->
+                <span class="flex">
+                    <h3><i class="fa fa-user-o" aria-hidden="true"></i> Louis Cameron</h3>
+                    <h4>Product Owner</h4>
+                </span>
+                <!--contact card details-->
+                <span class="flex">
+                    <h4><i class="fa fa-briefcase" aria-hidden="true"></i> Finance and Admin</h4>
+                    <h4><i class="fa fa-envelope-o" aria-hidden="true"></i>l****@gmail.com</h4>
+                    <h4><i class="fa fa-phone" aria-hidden="true"></i>+1 80045 45008</h4>
+                    <h4><button class="bdr-1" tabindex="0" onclick="getContact(true)"  id='contact-btn'>Get Contact</button></h4>
+                </span>
+            </div>
+        </div>
+    </div>
+        <!--popup a contact card-->
+        <div class="brd-1 popup " id="popup" onclick="getContact(false)">
+            <img src="image/avatar.png" alt="contact-avatar">
+            <div class="info">
+                <h4 class="font-js">ZOMIA LOUSIY</h4>
+                <h4 class="font-js"><i class="fa fa-briefcase" aria-hidden="true"></i> Finance and Admin</h4>
+                <h4 class="font-js"><i class="fa fa-envelope-o" aria-hidden="true"></i>zoima@gmail.com</h4>
+                <h4 class="font-js"><i class="fa fa-phone" aria-hidden="true"></i>+1 80045 45008</h4>
+                <br>
+                <h4>
+                    <button class="call font-js">
+                        <i class="fa fa-telegram" aria-hidden="true"></i>
+                        Click Me to Close!
+                    </button>
+                    
+                </h4>
+                <br>
+            </div>
+        </div>
+    <div class="flex m-btn">
+        <button class='font-pop opt-1'>More Contacts from Sony Music</button>
+    </div>
+    
+    <br><br>
+    <!--Chart area-->
+    <div class="flex chartArea">
+        <div id="googleCharts" style="height: 350px; width:51rem"></div>
+    </div>
+    <div> <h4 class="font-js topic t2">Similar Compaines</h4> </div>
+    <br>
+   
+    
+    <!--Details of more companies-->
+    <ul class="flex more-companies">
+        <li>
+            <h4 class="font-pops"><i class="fa fa-building-o" aria-hidden="true"></i>Topgolf Inc.</h4>
+            <h4>
+                1717 McKinsey Ave Suite 800
+            </h4>
+            <h4>Dallas United States</h4>
+        </li>
+        <li>
+            <h4 class="font-pops"><i class="fa fa-building-o" aria-hidden="true"></i>Equonix Holdings Inc.</h4>
+            <h4>
+                1718 McKinsey Ave Suite 800
+            </h4>
+            <h4>Dallas United States</h4>
+        </li>
+        <li id="last">
+            <h4 class="font-pops"><i class="fa fa-building-o" aria-hidden="true"></i>Uiowa.</h4>
+            <h4>
+                1719 McKinsey Ave Suite 800
+            </h4>
+            <h4>Dallas United States</h4>
+        </li>
+    </ul>
+    <div class="flex m-btn">
+        <button class='font-pop opt-2'>More Companies</button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <h4 class="font-js topic">Email Pattern</h4>
+    </div>
+    <br><br>
+    <!--Possible email patterns-->
+    <ul class="mail-list">
+        <li class="flex head">
+            <h4 class="font-pop">Sony Music Entertainment</h4>
+            <h4 class="font-pop">       </h4>
+            <h4 class="font-pop">Percentage</h4>
+        </li>
+        <li class="flex">
+            <h4 class="font-pop">first'.'last</h4>
+            <h4 class="font-pop">jane.doe@sonymusic.com</h4>
+            <h4 class="font-pop">80.233 &percnt;</h4>
+        </li>
+        <li class="flex">
+            <h4 class="font-pop">first last</h4>
+            <h4 class="font-pop">janedoe@sonymusic.com</h4>
+            <h4 class="font-pop">4.651&percnt;</h4>
+        </li>
+        <li class="flex">
+            <h4 class="font-pop">first initial</h4>
+            <h4 class="font-pop">doej@sonymusic.com</h4>
+            <h4 class="font-pop">3.488&percnt;</h4>
+        </li>
+        <li class="flex">
+            <h4 class="font-pop">last</h4>
+            <h4 class="font-pop">jane.doe@sonymusic.com</h4>
+            <h4 class="font-pop">5.889&percnt;</h4>
+        </li>
+        <li class="flex">
+            <h4 class="font-pop">first</h4>
+            <h4 class="font-pop">janedoe@sonymusic.com</h4>
+            <h4 class="font-pop">2.890&percnt;</h4>
+        </li>
+        <li class="flex">
+            <h4 class="font-pop">first_initial last</h4>
+            <h4 class="font-pop">jdoe@sonymusic.com</h4>
+            <h4 class="font-pop">2.36&percnt;</h4>
+        </li>
+    </ul>
+    <div class="flex m-btn" style="transform: translateY(100%);">
+        <button class='font-pop opt-3 brd-1'>Get Free Contacts</button>
+    </div>
+    <footer class="flex">
+        <div>
+            <h4 class="font-js"> &copy; All Rights Reserved SLI Technologies</h4>
+            
+        </div>
+        <div class="flex">
+            <h4 class="font-js">Blog |</h4>
+            <h4 class="font-js">Privacy |</h4>
+            <h4 class="font-js">Contactus |</h4>
+            <h4 class="font-js">Terms and Conditions</h4>
+
+        </div>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>

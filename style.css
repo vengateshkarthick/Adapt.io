@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    position: relative;
+    font-family: sans-serif,serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+:root{
+    --about:#f7465d;
+    --logo-color:#f0475e;
+    --placeholder-color:#d1bfbf;
+    --bg-color:whitesmoke;
+    --bg-color-g:gainsboro;
+    --bg-color-n:#ffff;
+    --border-mnu:#f5f5f5;
+    --success-color:#4caf50;
+    --new-color:#008cba;
+    --checkout-btn:#555555;
+    --regular:black;
+    --border-color: rgb(74, 168, 206);
+    --primary-color:#24a0ed;
+
+}
+/*gobal class that makes font family as Poppins */
+.font-pop{
+    font-family: "Poppins",sans-serif;
+}
+.font-js{
+    font-family: "Josefin Sans",sans-serif;
+}
+.bdr-1{
+ border:1px solid var(--checkout-btn);
+}
+/* menu bar with logo & links*/
+ .mnu{
+    justify-content: space-evenly;
+    align-items:center;
+    flex-wrap: wrap;
+    height:10%;
+    max-width:99%;
+    border-radius: 5px;
+    border:2px solid var(--border-mnu);
+    top:0;
+    padding: 0.5rem;
+
+}
+
+
+/*menu icon in menu bar*/
+.mnu_icon{
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    margin: 4px;
+}
+/*hamburger menu-icon*/
+.mnu_icon i{
+    color:var(--checkout-btn);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+#icon{
+    display: none;
+}
+.mnu_icon span{
+    font-size: 2rem;
+    font-weight: 500;
+    color:var(--checkout-btn);
+    letter-spacing: 1px;
+    user-select: none;
+    align-items: center;
+}
+.mnu_icon .logo h4{
+    font-size: 1rem;
+    font-weight: 600;
+    color:var(--checkout-btn);
+}
+/*logo-img*/
+.mnu_icon .logo img{
+    height: auto;
+    width:7%;
+    margin: 6px;
+}
+
+/*links in menu bar*/
+.mnu_items {
+    display: flex;
+    flex-basis: 50%;
+    margin:4px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* menu lists  in menu bar*/
+.mnu_items  li {
+    
+    list-style-type: none;
+    font-size: 1rem;
+    user-select: none;
+    cursor: pointer;
+    padding: 5px;
+   
+    outline: none;
+}
+/*links in menu bar*/
+.mnu_items li a{
+    padding:5px 8px;
+    border:2px solid transparent;
+    color:var(--regular);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 500;
+    outline: none;
+}
+.mnu_items li .demo{
+    background-color: var(--primary-color);
+    color:var(--bg-color-n);
+    font-weight: 600;
+    border-color:var(--primary-color);
+
+}
+.mnu_items  li a:hover{
+    border-color: var(--primary-color);
+    color:var(--primary-color);
+    font-weight: 600;    
+}
+.mnu_items  li:focus a{
+    outline: 2px solid var(--primary-color);
+    color:var(--primary-color);
+}
+
+.mnu_items li .demo:hover{
+    background-color: var(--bg-color-n);
+    color:var(--primary-color);
+    border-color:var(--primary-color);
+
+}
+.mnu_items  li:focus .demo{
+    background-color: var(--bg-color-n);
+}
+
+
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+@media screen and (max-width:500px){
+    .mnu{
+        justify-content: space-between;
+        width: 99%;
+    }
+}
+@media screen and (max-width:1000px){
+    
+    .mnu_icon {
+        flex-basis: 90%;
+    }
+    .mnu_icon #icon{
+        display: inline-block;
+        right: 0;
+    }
+    #mnlist{
+        flex-basis: 100%;
+        display: none;
+    }
+    
+    .mnu_items  li{
+        padding:8px;
+        width: 100%;
+    }
+    .mnu_items li .demo{
+         background-color: var(--bg-color-n);
+         color: var(--primary-color);
+    }
+    .mnu_items li:hover{
+        background-color: var(--primary-color);
+        color:var(--bg-color-n);
+        font-weight: 700;
+       
+    }
+    .mnu_items li:hover a{
+        color:var(--bg-color-n);
+    }
+     .mnu_items li:last-child:hover {
+         background-color: var(--bg-color-n);
+          color:var(--primary-color);  
+    }
+    .mnu_items li:last-child:hover .demo{
+        background-color: var(--primary-color);
+          color:var(--bg-color-n);
+    }
+   
+}
+
+/*main-content Company-details*/
+/*container[1x3]*/
+header{
+    justify-content: space-evenly;
+    align-items: center;
+    width:90%;
+    height: max-content;
+    top:20px;
+    margin:auto;
+    border-color: whitesmoke !important;
+    box-shadow:2px 2px 2px 2px whitesmoke,1px 1px 1px 1px whitesmoke;
+    border-radius: 10px;
+    
+}
+
+header div{
+    margin:4px;
+}
+/*Company logo*/
+header .logo{
+    align-self: flex-start;
+    padding:2px;
+    max-width: fit-content;
+    user-select: none;
+}
+header .logo img{
+    height:auto;
+    width:75px;
+}
+@media screen and (max-width:900px){
+    header .logo img{
+    width:50px;
+}
+
+}
+/*About the company*/
+/*container[3*1]*/
+header .cont-hdr{
+    flex-basis:40%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: fit-content;
+}
+/*company name*/
+header .cont-hdr h3{
+    font-family:"Quicksands",sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    margin:6px;
+    padding:4px;
+    align-self: flex-start;
+    color:var(--checkout-btn);
+}
+@media screen and (max-width:1500px){
+    header .cont-hdr h3{
+    font-size: 1.5rem;
+}
+
+}
+@media screen and (max-width:900px){
+    header .cont-hdr h3{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:400px){
+    header .cont-hdr h3{
+        font-size: 8px;
+}
+}
+/*Info about location,phno,website*/
+header .cont-hdr span{
+    padding: 5px;
+    margin:5px;
+    align-self: flex-start;
+}
+@media screen and (max-width:800px){
+    header .cont-hdr span{
+        padding: 2px;
+        margin: 2px;
+    }
+}
+
+header  .cont-hdr h4{
+    padding:4px;
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color:var(--bg-color-g);
+    text-align: left;
+}
+@media screen and (max-width:900px){
+    header .cont-hdr h4{
+        padding: 2px;
+        font-size: 12px;
+}
+
+}
+
+@media screen and (max-width:500px){
+    header .cont-hdr h4{
+        padding: 2px;
+        font-size: 8px;
+}
+
+}
+/*content icons*/
+header .cont-hdr i{
+    margin:2px;
+}
+/*company website*/
+header .cont-hdr h4 .url{
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Requt-demo-card*/
+/*container[3x1]*/
+header .rqt-demo{
+    width:fit-content;
+    width:25%;
+    border-color: var(--border-mnu);
+    border-radius: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+header .rqt-demo span{
+    padding: 5px;
+    margin:5px;
+    align-self: flex-start;
+}
+header .rqt-demo img{
+    height: auto;
+    width: 75px;
+    margin:5px;
+}
+header .rqt-demo .article{
+    font-size: 1rem;
+    font-weight: 500;
+    color:var(--checkout-btn);
+    margin:2px;
+}
+header .rqt-demo .btn-rd{
+    padding:8px;
+    font-weight: 600;
+    border-color: transparent;
+    background-color:var(--success-color);
+    border-radius: 18px;
+    color:var(--bg-color-n);
+    margin:5px;
+}
+@media screen and (max-width:900px){
+    header #rqtdemo{
+        display: none;
+    }
+}
+
+/*More  detials about that company*/
+
+section{
+    border-color: var(--border-mnu) !important;
+    box-shadow: 2px 2px 2px 2px gainsboro,1px 1px 1px 1px whitesmoke;
+    border-radius: 10px;
+    top:40px;
+    margin:auto;
+    justify-content: space-evenly;
+    align-items: center;
+    width:90%;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:600){
+    section{
+        width: 90%;
+    }
+}
+section div{
+    margin: 4px;
+    flex-basis:100%;
+    align-items: center;
+}
+/*More information about the contacts*/
+section .contacts-info{
+    justify-content: space-evenly;
+}
+section .contacts-info span h2{
+    font-family: "Quicksands",sans-serif;
+    font-size: 2rem;
+    color:var(--checkout-btn);
+    font-weight: 500;   
+    margin:4px;
+}
+@media screen and (max-width:1500px){
+    section .contacts-info span h2{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:1000px){
+    section .contacts-info span h2{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:500px){
+    section .contacts-info span h2{
+        font-size: 12px;
+    }
+}
+section i{
+    padding: 4px;
+}
+section .contacts-info span h4{
+    font-size:1rem;
+    color:var(--bg-color-g);
+    font-weight: 600;   
+    margin:1px;
+    
+}
+@media screen and (max-width:900px){
+    section .contacts-info span h4{
+        font-size:12px;
+    }
+}
+section .add-ons{
+    justify-content: center;
+}
+section .add-ons h3{
+    margin:4px;
+    padding:5px;
+    font-size: 1.25rem;
+    line-height: 20px;
+    color:var(--bg-color-g);
+    font-weight: 500;
+}
+@media screen and (max-width:1500px){
+    section .add-ons h4{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:900px){
+    section .add-ons h3{
+        font-size: 14px;
+    }
+}
+
+/*emp contact-details*/
+/*container[2*3]*/
+.contacts{
+    transform: translateY(50px);
+    top:15px;
+    border:1px solid transparent;
+    row-gap: 10px;
+    bottom: 15px;
+}
+@media screen and (max-width:900px){
+    .contacts{
+        place-content: center;
+    }
+}
+/*the two div*/
+.contacts .row1, 
+.contacts .row2{
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+@media screen and (max-width:900px){
+    .contacts .row1{
+        row-gap: 5px;
+        column-gap: 5px;
+        justify-content: flex-start;
+    }
+    .contacts .row2{
+        display: none;
+    }
+}
+@media screen and (max-width:500px){
+    .contacts .row1 {
+        row-gap: 5px;
+        column-gap: 5px;
+        justify-content:center;
+    }
+    
+}
+.contacts .row1 .cards,
+.contacts .row2 .cards{
+    border:2px solid var(--bg-color);
+    border-radius: 5px;
+    padding:5px;
+    height: 300px;
+    width:300px;
+    margin: 5px;
+}
+@media screen and (max-width:1000px){
+    .contacts .row1 .cards,
+    .contacts .row2 .cards{
+        height: 270px;
+        width:230px;
+    }
+}
+@media screen and (max-width:800px){
+    .contacts .row1 .cards,
+    .contacts .row2 .cards{
+        width:180px;
+        align-items: center;
+    }
+}
+/*the name and contact-details portions of each contact-card*/
+.contacts .cards span{
+        justify-content:space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        margin:5px;
+        padding: 10px;
+}
+@media screen and (max-width:1000px){
+    .contacts .row1 .cards span,
+    .contacts .row2 .cards span{
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+}
+
+
+.contacts .cards h3,.contacts .cards h4{
+    padding: 5px;
+    margin: 5px;
+    justify-self: center;
+}
+@media screen and (max-width:1000px){
+    .contacts .row1 .cards h4,
+    .contacts .row2 .cards h4{
+        padding: 2px;
+        margin: 2px;
+    }
+}
+@media screen and (max-width:800px){
+    .contacts .cards h4{
+        margin: 4px;
+        font-size: 12px;
+    }
+    .contacts .cards h3{
+        font-size: 14px;
+    }
+}
+/*name in contact-card*/
+.contacts .cards h3{
+   color:var(--new-color);
+}
+/*contact details in contact-card*/
+.contacts .cards h4{
+     color:var(--bg-color-g);
+}
+.contacts .cards h4 i{
+    padding: 4px;
+}
+/*Get Contact Button*/
+.contacts .cards h4 button{
+    padding: 6px;
+    background-color: var(--success-color);
+    border-color :var(--success-color) !important;
+    color:var(--border-mnu);
+    font-size: 14px;
+    font-weight: 600;
+    outline: 1px solid var(--success-color);
+    cursor: pointer;
+}
+.contacts .cards h4 button:hover,
+.contacts .cards h4 button:focus{
+    background-color: var(--bg-color-n);
+    color:var(--success-color);
+}
+/*more options button for every tab*/
+.m-btn{
+    justify-content: center;
+    align-items: center;
+    transform: translateY(150%);
+    margin:10%;
+}
+.m-btn button{
+    padding:10px;
+    background-color:whitesmoke;
+    color:var(--checkout-btn);
+    outline: none;
+    border:2px solid var(--border-mnu);
+    border-radius: 18px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px whitesmoke,1px 1px 1px 1px whitesmoke,1px 1px 1px 1px whitesmoke;
+}
+.m-btn .opt-3{
+    background-color: var(--success-color);
+    color:#ffff;
+    border-color:transparent!important;
+    letter-spacing: 1px;  
+    
+}
+.m-btn button:focus{
+    box-shadow: 2px 2px 2px 2px gainsboro,1px 1px 1px 1px gainsboro;
+}
+.m-btn .opt-3:focus{
+    color:var(--success-color);
+    background-color:white ;
+    border-color: var(--success-color)!important;
+    box-shadow: 1px 1px 1px 1px var(--success-color)  ;
+}
+@media screen and (max-width:400px){
+    .m-btn{
+       margin-top: 5%;
+       transform: translateY(130%);
+    }
+    .m-btn .opt-2{
+        color:var(--new-color);
+        border:2px solid var(--new-color);
+        background-color:white;
+        border-radius: 5px;
+        transform: translateY(-10%);
+    }
+    .m-btn .opt-2:hover {
+        background-color:var(--new-color);
+        color: white;
+
+    }
+    
+}
+/*headings of each part*/
+.topic{
+    position: absolute;
+    top:50px;
+    transform: translate(20%,70%);
+    bottom: 10px;
+    color:var(--new-color);
+    font-size: 1.5rem;
+}
+
+/*gooleChart*/
+.chartArea{
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+#googleCharts{
+    border:2px solid whitesmoke;
+    box-shadow:1px 1px 1px 1px whitesmoke,3px 3px 3px 3px whitesmoke;
+     border-radius: 10px;
+}
+@media screen and (max-width:600px){
+    .chartArea{
+        max-width:90% ;
+        transform: translateX(2%);
+    }
+    #googleCharts{
+        overflow-y: scroll;
+    }
+
+}
+/*list of more companies*/
+.more-companies{
+    transform: translateY(80%);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.more-companies li{
+    list-style-type: none;
+    padding: 10px 14px;
+    border:1px solid var(--bg-color);
+    box-shadow:2px 2px 2px 2px #f5f5f5;
+    border-radius: 10px;
+    width:300px;
+}
+
+.more-companies li h4{
+    font-size: 1rem;
+    font-weight:500;
+    margin-left:10% ;
+    padding: 4px;
+    color:var(--checkout-btn);
+}
+.more-companies li h4 i{
+    padding:5px;
+}
+.more-companies li h4:first-child{
+        color:var(--new-color);
+        margin: 6px;
+        align-self: flex-start;
+        font-size: 18px;
+}
+@media screen and (max-width:1000px){
+    .more-companies li:last-child{
+        display: none;
+    }
+    
+}
+@media screen and (max-width:800px){
+    .more-companies li:nth-child(2){
+        display: none;
+    }
+    
+}
+@media screen and (max-width:400px){
+    .more-companies ,.t2{
+        display: none;
+    }
+    
+}
+
+
+/*maillist*/
+.mail-list{
+    transform: translateY(25%);
+    border:1px solid whitesmoke;
+    border-radius: 18px;
+    padding:10px;
+    margin:12px; 
+}
+
+.mail-list li{
+    padding:12px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom:1px solid gainsboro ;
+   
+}
+.mail-list li:last-child{
+    border:none
+}
+.mail-list li h4{
+    color:var(--bg-color-g);
+    font-weight: 500;
+}
+.mail-list .head h4{
+    color:var(--checkout-btn);
+    font-size: 15px;
+}
+@media screen and (max-width:1000px){
+.mail-list{ 
+    margin:5px;
+}
+.mail-list li{
+    padding:8px ;
+}
+}
+@media screen and (max-width:700px){
+.mail-list .head h4{
+    font-size: 12px;
+}
+.mail-list li h4{
+    font-size: 10px;
+}
+}
+/*footer*/
+footer{
+    justify-content: space-between;
+    background-color: var(--new-color);
+    flex-wrap: wrap;
+    top:40px;
+    flex-grow: 1;
+}
+footer div{
+    margin:5px;
+    padding: 5px;
+    user-select: none;
+}
+footer div h4{
+    margin: 2px;
+    padding:2px;
+    color:white;
+}
+@media screen and (max-width:700px){
+    footer div{
+        margin:2px;
+    }
+    footer h4{
+        white-space: nowrap;
+        font-size: 12px;
+    }
+}
+footer div:last-child{
+    cursor: pointer;
+}
+/*popup*/
+.popup{
+    display: flex;
+    top:0;
+    position: fixed;
+    z-index: 2;
+    border:2px solid var(--bg-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+    border-radius: 18px;
+    padding: 5px;
+    margin-left: 30%;
+    background-color: white;
+    max-width:fit-content ;
+    transition: transform 1s ease-in;
+
+}
+#popup{
+    display: none;
+}
+/*Iamge in poup*/
+.popup img{
+    border-radius: 50%;
+    height: auto;
+    width:25%;
+}
+/*Details in popup*/
+.popup .info{
+    margin:5px;
+    margin-top: 10px;
+}
+
+.popup .info h4:first-child{
+    transform: translateX(10%);
+    margin:6px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.popup .info h4{
+    font-weight:500;
+    color:rebeccapurple;
+    font-size: 18px;
+}
+.popup h4 i{
+    padding: 10px;
+}
+/*button in popup*/
+.popup .info .call{
+    background-color:white;
+    font-weight: 600;
+    color:rebeccapurple;
+    border-radius: 5px;
+    border: 2px solid rebeccapurple ;
+    white-space:nowrap;
+    font-size: 1rem;
+    padding: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in-out;
+
+}
+.popup .info button i{
+    font-size: 20px;
+}
+.popup .info  button:hover{
+    box-shadow: 2px 2px 2px 2px rebeccapurple,1px 1px 1px 1px rebeccapurple;
+}
+@media screen and (max-width:1000px){
+    .popup{
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width:800px){
+    .popup{
+        margin-left: 10%;
+    }
+    .popup .info h4{
+        font-size: 14px;
+    }
+    .popup .info button{
+        padding: 8px;
+    }
+    .popup .info button i{
+        font-size: 1rem;
+        padding: 4px;
+    }
+    .popup .info button{
+        font-size: 12px;
+        font-weight:500;
+    }
+}
+@media screen and (max-width:600px){
+    .popup{
+        transform: translateX(-5%);
+    }
+}
+@media screen and (max-width:400px){
+    .popup{
+        margin:5px;
+        max-width: 80%;
+        transform: translateX(5%);
+    }
+    .popup .info h4{
+        font-size: 13px;
+    }
+     .popup .info button i{
+        font-size: 15px;
+    }
+    .popup .info h4 button{
+        font-size: 10px;
+        font-weight:500;
+    
+    }
+}
