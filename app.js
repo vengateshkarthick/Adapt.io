@@ -5,11 +5,11 @@
     const popup=document.getElementById("popup");
     function getContact(swapDisplay){
          if(swapDisplay){
-               //popup.style.transform="translateY(20%)";
+              
                popup.style.display="flex";
           }
           else{
-               //popup.style.transform="translateY(-110%)";
+      
                popup.style.display="none"
           }
     }
