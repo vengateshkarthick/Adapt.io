@@ -5,7 +5,10 @@
     padding:0px;
     position: relative;
     font-family: sans-serif,serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    
+}
+body{
+    background-color: whitesmoke;
 }
 
 :root{
@@ -36,6 +39,7 @@
 }
 /* menu bar with logo & links*/
  .mnu{
+    background-color: white;
     justify-content: space-evenly;
     align-items:center;
     flex-wrap: wrap;
@@ -47,13 +51,19 @@
     padding: 0.5rem;
 
 }
-
+@media screen and (max-width:500px){
+    .mnu{
+        justify-content: space-between;
+        width: 99%;
+    }
+}
 
 /*menu icon in menu bar*/
 .mnu_icon{
     justify-content: space-between;
     align-items: center;
     padding: 4px;
+    background-color: white;
     margin: 4px;
 }
 /*hamburger menu-icon*/
@@ -61,9 +71,11 @@
     color:var(--checkout-btn);
     cursor: pointer;
     font-size: 1.5rem;
+    background-color: white;
 }
 #icon{
     display: none;
+    background-color: white;
 }
 .mnu_icon span{
     font-size: 2rem;
@@ -72,17 +84,20 @@
     letter-spacing: 1px;
     user-select: none;
     align-items: center;
+    background-color: white;
 }
 .mnu_icon .logo h4{
     font-size: 1rem;
     font-weight: 600;
     color:var(--checkout-btn);
+    background-color: white;
 }
 /*logo-img*/
 .mnu_icon .logo img{
     height: auto;
     width:7%;
     margin: 6px;
+    background-color: white;
 }
 
 /*links in menu bar*/
@@ -93,10 +108,11 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    background-color: white;
 }
 /* menu lists  in menu bar*/
 .mnu_items  li {
-    
+    background-color: white;
     list-style-type: none;
     font-size: 1rem;
     user-select: none;
@@ -149,29 +165,27 @@
 .grid{
     display: grid;
 }
-@media screen and (max-width:500px){
-    .mnu{
-        justify-content: space-between;
-        width: 99%;
-    }
+@media screen and (max-width:1100px){
+    .mnu_items{ 
+   flex-basis: 40%;    
+   }
 }
 @media screen and (max-width:1000px){
     
     .mnu_icon {
         flex-basis: 90%;
-    }
-    .mnu_icon #icon{
-        display: inline-block;
-        right: 0;
-    }
+    }    
+    .mnu_items  li{
+        padding:8px;
+        width: 100%;
+    } 
     #mnlist{
         flex-basis: 100%;
         display: none;
     }
-    
-    .mnu_items  li{
-        padding:8px;
-        width: 100%;
+    .mnu_icon #icon{
+        display: inline-block;
+        right: 0;
     }
     .mnu_items li .demo{
          background-color: var(--bg-color-n);
@@ -202,18 +216,19 @@
 header{
     justify-content: space-evenly;
     align-items: center;
-    width:90%;
+    width:86%;
     height: max-content;
     top:20px;
     margin:auto;
     border-color: whitesmoke !important;
     box-shadow:2px 2px 2px 2px whitesmoke,1px 1px 1px 1px whitesmoke;
     border-radius: 10px;
-    
+    background-color: white;
 }
 
 header div{
     margin:4px;
+    background-color: white;
 }
 /*Company logo*/
 header .logo{
@@ -221,6 +236,7 @@ header .logo{
     padding:2px;
     max-width: fit-content;
     user-select: none;
+    background-color: white;
 }
 header .logo img{
     height:auto;
@@ -288,6 +304,9 @@ header  .cont-hdr h4{
     color:var(--bg-color-g);
     text-align: left;
 }
+header .cont-hdr span h4:last-child{
+    color:gray;
+}
 @media screen and (max-width:900px){
     header .cont-hdr h4{
         padding: 2px;
@@ -317,8 +336,9 @@ header .cont-hdr h4 .url{
 header .rqt-demo{
     width:fit-content;
     width:25%;
-    border-color: var(--border-mnu);
-    border-radius: 5px;
+    border:2px solid var(--border-mnu);
+    box-shadow: 2px 2px 2px 2px whitesmoke;
+    border-radius: 10px;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
@@ -334,11 +354,16 @@ header .rqt-demo img{
     margin:5px;
 }
 header .rqt-demo .article{
-    font-size: 1rem;
-    font-weight: 500;
     color:var(--checkout-btn);
-    margin:2px;
+    font-size: 15px;
+    justify-self: center;
+    line-height: 20px;
 }
+.header .rqt-demo span h4{
+    font-size:8px;
+    color:var(--checkout-btn);
+}
+
 header .rqt-demo .btn-rd{
     padding:8px;
     font-weight: 600;
@@ -348,7 +373,7 @@ header .rqt-demo .btn-rd{
     color:var(--bg-color-n);
     margin:5px;
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:1100px){
     header #rqtdemo{
         display: none;
     }
@@ -364,8 +389,9 @@ section{
     margin:auto;
     justify-content: space-evenly;
     align-items: center;
-    width:90%;
+    width:86%;
     flex-wrap: wrap;
+    background-color: white;
 }
 @media screen and (max-width:600){
     section{
@@ -376,10 +402,12 @@ section div{
     margin: 4px;
     flex-basis:100%;
     align-items: center;
+    padding: 15px;
 }
 /*More information about the contacts*/
 section .contacts-info{
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin:12px;
 }
 section .contacts-info span h2{
     font-family: "Quicksands",sans-serif;
@@ -388,7 +416,10 @@ section .contacts-info span h2{
     font-weight: 500;   
     margin:4px;
 }
-@media screen and (max-width:1500px){
+@media screen and (max-width:1000px){
+    section .contacts-info {
+        margin:6px;
+    }
     section .contacts-info span h2{
         font-size: 1.5rem;
     }
@@ -409,35 +440,47 @@ section i{
 section .contacts-info span h4{
     font-size:1rem;
     color:var(--bg-color-g);
-    font-weight: 600;   
+    font-weight: 500;   
     margin:1px;
-    
+    white-space: nowrap;
 }
 @media screen and (max-width:900px){
     section .contacts-info span h4{
         font-size:12px;
+        font-weight: 400;
     }
 }
 section .add-ons{
     justify-content: center;
 }
 section .add-ons h3{
-    margin:4px;
-    padding:5px;
+    margin:auto;
+    padding:20px;
+    line-height: 30px;
     font-size: 1.25rem;
-    line-height: 20px;
-    color:var(--bg-color-g);
+    line-height: 30px;
+    color:gray;
     font-weight: 500;
 }
-@media screen and (max-width:1500px){
-    section .add-ons h4{
+@media screen and (max-width:1000px){
+    section .add-ons h3{
         font-size: 1rem;
+        padding: 10px;
     }
 }
 @media screen and (max-width:900px){
     section .add-ons h3{
         font-size: 14px;
+        padding: 6px;
     }
+
+}
+@media screen and (max-width:400px){
+    section .add-ons h3{
+        font-size: 12px;
+        padding: 1px;
+    }
+
 }
 
 /*emp contact-details*/
@@ -446,12 +489,14 @@ section .add-ons h3{
     transform: translateY(50px);
     top:15px;
     border:1px solid transparent;
-    row-gap: 10px;
+    row-gap: 8px;
     bottom: 15px;
+    
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:1200px){
     .contacts{
         place-content: center;
+        margin: auto;
     }
 }
 /*the two div*/
@@ -465,11 +510,11 @@ section .add-ons h3{
     flex-shrink: 1;
     flex-grow: 0;
 }
+
 @media screen and (max-width:900px){
     .contacts .row1{
-        row-gap: 5px;
-        column-gap: 5px;
-        justify-content: flex-start;
+        row-gap: 8px;
+    
     }
     .contacts .row2{
         display: none;
@@ -477,7 +522,6 @@ section .add-ons h3{
 }
 @media screen and (max-width:500px){
     .contacts .row1 {
-        row-gap: 5px;
         column-gap: 5px;
         justify-content:center;
     }
@@ -486,23 +530,32 @@ section .add-ons h3{
 .contacts .row1 .cards,
 .contacts .row2 .cards{
     border:2px solid var(--bg-color);
-    border-radius: 5px;
+    border-radius: 10px;
     padding:5px;
     height: 300px;
     width:300px;
-    margin: 5px;
+    margin: 2px;
+    background-color: white;
+}
+@media screen and (max-width:1100px){
+    .contacts .row1 .cards,
+    .contacts .row2 .cards{
+        width:270px;
+        
+    }
 }
 @media screen and (max-width:1000px){
     .contacts .row1 .cards,
     .contacts .row2 .cards{
         height: 270px;
         width:230px;
+        
     }
 }
 @media screen and (max-width:800px){
     .contacts .row1 .cards,
     .contacts .row2 .cards{
-        width:180px;
+        width:200px;
         align-items: center;
     }
 }
@@ -525,7 +578,7 @@ section .add-ons h3{
 
 .contacts .cards h3,.contacts .cards h4{
     padding: 5px;
-    margin: 5px;
+    margin: 2px;
     justify-self: center;
 }
 @media screen and (max-width:1000px){
@@ -547,23 +600,26 @@ section .add-ons h3{
 /*name in contact-card*/
 .contacts .cards h3{
    color:var(--new-color);
+   padding: 5px;
+
 }
 /*contact details in contact-card*/
 .contacts .cards h4{
-     color:var(--bg-color-g);
+     color:gray;
+     font-weight: 400;
 }
 .contacts .cards h4 i{
     padding: 4px;
 }
 /*Get Contact Button*/
 .contacts .cards h4 button{
-    padding: 6px;
+    padding: 8px;
     background-color: var(--success-color);
     border-color :var(--success-color) !important;
-    color:var(--border-mnu);
-    font-size: 14px;
+    color:white;
+    font-size: 16px;
     font-weight: 600;
-    outline: 1px solid var(--success-color);
+    border-radius: 5px;
     cursor: pointer;
 }
 .contacts .cards h4 button:hover,
@@ -580,17 +636,17 @@ section .add-ons h3{
 }
 .m-btn button{
     padding:10px;
-    background-color:whitesmoke;
+    background-color:gainsboro;
     color:var(--checkout-btn);
     outline: none;
-    border:2px solid var(--border-mnu);
+    border:2px solid gainsboro;
     border-radius: 18px;
+    font-size: 1rem;
     cursor: pointer;
-    font-size:1rem;
     white-space: nowrap;
-    font-weight: bold;
+    font-weight: 600;
     outline: none;
-    box-shadow: 1px 1px 1px 1px whitesmoke,1px 1px 1px 1px whitesmoke,1px 1px 1px 1px whitesmoke;
+    box-shadow: 1px 1px 1px 1px gainsboro,1px 1px 1px 1px gainsboro,1px 1px 1px 1px gainsboro;
 }
 .m-btn .opt-3{
     background-color: var(--success-color);
@@ -606,11 +662,25 @@ section .add-ons h3{
     color:var(--success-color);
     background-color:white ;
     border-color: var(--success-color)!important;
-    box-shadow: 1px 1px 1px 1px var(--success-color)  ;
+    box-shadow: 2px 2px 2px 2px gainsboro  ;
+}
+@media screen and (max-width:1000px){
+    .m-btn{
+        margin:14%;
+    }
+    .m-btn button{
+        font-weight: 400;
+    }
+}
+@media screen and (max-width:800px){
+    .m-btn button {
+        font-size: 14px;
+        padding: 6px;
+    }
 }
 @media screen and (max-width:400px){
     .m-btn{
-       margin-top: 5%;
+       margin-top: 10%;
        transform: translateY(130%);
     }
     .m-btn .opt-2{
@@ -625,7 +695,9 @@ section .add-ons h3{
         color: white;
 
     }
-    
+    .m-btn .opt-3{
+        border-radius: 5px;
+    }
 }
 /*headings of each part*/
 .topic{
@@ -642,15 +714,17 @@ section .add-ons h3{
     justify-content: center;
     align-items: center;
     margin: 2px;
+    border-radius: 10px;
 }
 #googleCharts{
     border:2px solid whitesmoke;
     box-shadow:1px 1px 1px 1px whitesmoke,3px 3px 3px 3px whitesmoke;
-     border-radius: 10px;
+    
 }
 @media screen and (max-width:600px){
     .chartArea{
         max-width:90% ;
+        margin:auto;
         transform: translateX(2%);
     }
     #googleCharts{
@@ -672,6 +746,7 @@ section .add-ons h3{
     box-shadow:2px 2px 2px 2px #f5f5f5;
     border-radius: 10px;
     width:300px;
+    background-color: white;
 }
 
 .more-companies li h4{
@@ -716,7 +791,9 @@ section .add-ons h3{
     border:1px solid whitesmoke;
     border-radius: 18px;
     padding:10px;
-    margin:12px; 
+    margin:auto; 
+    max-width: 86%;
+    background-color: white;
 }
 
 .mail-list li{
@@ -739,7 +816,7 @@ section .add-ons h3{
 }
 @media screen and (max-width:1000px){
 .mail-list{ 
-    margin:5px;
+    margin:auto;
 }
 .mail-list li{
     padding:8px ;
@@ -755,11 +832,11 @@ section .add-ons h3{
 }
 /*footer*/
 footer{
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: var(--new-color);
     flex-wrap: wrap;
     top:40px;
-    flex-grow: 1;
+
 }
 footer div{
     margin:5px;
@@ -772,8 +849,9 @@ footer div h4{
     color:white;
 }
 @media screen and (max-width:700px){
+    
     footer div{
-        margin:2px;
+        margin:1px;
     }
     footer h4{
         white-space: nowrap;
@@ -790,17 +868,18 @@ footer div:last-child{
     position: fixed;
     z-index: 2;
     border:2px solid var(--bg-color);
+    box-shadow: 2px 2px 2px 2px whitesmoke;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top:10px;
     border-radius: 18px;
     padding: 5px;
-    margin-left: 30%;
+    margin-left: 33%;
     background-color: white;
     max-width:fit-content ;
     transition: transform 1s ease-in;
-
+    width: 400px;
 }
 #popup{
     display: none;
@@ -818,7 +897,7 @@ footer div:last-child{
 }
 
 .popup .info h4:first-child{
-    transform: translateX(10%);
+    transform: translateX(5%);
     margin:6px;
     font-weight: 600;
     font-size: 20px;
@@ -853,12 +932,13 @@ footer div:last-child{
 }
 @media screen and (max-width:1000px){
     .popup{
-        margin-left: 20%;
+        margin-left: 30%;
     }
 }
 @media screen and (max-width:800px){
     .popup{
-        margin-left: 10%;
+        margin-left:30%;
+        width:300px;
     }
     .popup .info h4{
         font-size: 14px;
@@ -877,14 +957,21 @@ footer div:last-child{
 }
 @media screen and (max-width:600px){
     .popup{
-        transform: translateX(-5%);
+        transform: translateX(10%);
     }
 }
+@media screen and (max-width:430px){
+    .popup{
+        margin-left: 10%;;
+    }
+}
+
 @media screen and (max-width:400px){
     .popup{
         margin:5px;
-        max-width: 80%;
-        transform: translateX(5%);
+        max-width: 60%;
+
+        transform: translateX(20%);
     }
     .popup .info h4{
         font-size: 13px;
